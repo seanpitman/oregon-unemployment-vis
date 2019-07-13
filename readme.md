@@ -1,6 +1,6 @@
 # Horizon Plot of Oregon County and MSA Unemployment since 1990
 
-
+A reproducible example of an exploration of Oregon county and MSA unemployment data. R code tidies and explores statistical summaries and visualizations of appropriately downloaded file. The code produces a well-polished horizon plot inspired by those created by Jorge Camoes in Excel.
 
 ## Getting Started
 
