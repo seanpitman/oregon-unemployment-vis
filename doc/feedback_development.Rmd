@@ -1,0 +1,24 @@
+---
+title: "Assignment 4 Plot Development"
+author: "Sean Pitman"
+date: "6/8/2019"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+![](horizon.pdf)
+
+The major components of the horizon plot were complete upon peer review, and feedback focused mainly on polishing. Suggestions for improvement of the plot included the following:
+
+* Add a colorbar to indicate ranges
+* Increased font size for increased readability
+* Subset the data to allow a better comparison
+  + Pull out Oregon and the United States
+* Add a vertical line near the described job crisis
+* Highlight Crook County's horizon to draw viewer attention
+
+Nearly all of these suggestions were implemented in the final product. The discrete colorbar from the RdYlBlu palette in R was chosen to be colorblind friendly, and labels were added to the resulting legend in a manner that clearly describes the corresponding numeric ranges. Font size was increased dramatically to 14-20 point font except for the county labels, remaining at 10 point font to avoid clipping. The United States and Oregon unemployment histories when compared together and against the data were largely uninteresting, prompting their removal and the resulting subset of the original data. A vertical red indicator line was added at date 2008-01-01 to indicate the start of the job crisis that followed the financial crisis. 
+The only suggestion not incorporated was the highlighting of Crook County. This was excluded due to the way the horizon plot is constructed in ggplot2. The ggplot_horizon function from the package ggTimeSeries constructs a stacked barplot with various preset function arguments and returns a ggplot object to add on to. This can be manipulated with facet_grid to produce the classic horizon plot, however any other layers must be applied to all facets, and can't be implemented before the default settings of the horizon plot itself. Given more time, an excellent long term project would be to rewrite the ggplot_horizon function code from the ground up, allowing for additional customization and annotation.
