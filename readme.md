@@ -2,6 +2,8 @@
 
 A reproducible example of an exploration of Oregon county and MSA unemployment data. R code tidies and explores statistical summaries and visualizations of appropriately downloaded file. The code produces a well-polished horizon plot inspired by those created by Jorge Camoes in Excel.
 
+![](doc/horizon.png)
+
 ## Getting Started
 
 This section provides a brief overview of the software required to properly run the applet included in this project.
